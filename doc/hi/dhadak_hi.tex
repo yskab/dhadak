@@ -1,0 +1,153 @@
+% !TeX program = xelatex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{hindi}
+\newfontfamily\devanagarifont[Script=Devanagari]{Eczar}
+\setotherlanguages{english}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows, shapes.geometric}
+\usepackage{graphicx}
+\usepackage{caption, copyrightbox}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{xfrac}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{lmodern}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	pdftitle={Dhadak - A Pulse Oximeter},
+	pdfsubject={Engineering, Circuit Design, Medical},
+	pdfauthor={Y S K Abhijeet},
+	pdfkeywords={oximeter, circuit design, electronics, heart rate}
+}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\renewcommand\UrlFont{\ttfamilylatin}
+
+\begin{document}
+	
+	\pagenumbering{roman}
+	\begin{titlepage}
+		\vspace*{5cm}
+		{\centering
+			
+			\includegraphics[width=1\textwidth]{../common/logo.png}\par
+		}
+		\vspace{4cm}
+		\hfil \Large\bfseries हिन्दी \hfil
+		\vfill
+	\end{titlepage}
+	
+	\include{about}
+	\tableofcontents
+	\pagebreak
+	\pagenumbering{arabic}
+	
+	\include{intro}	
+	\include{comp}
+	\include{circuit}
+	\include{algo}
+	\include{enc}
+	\pagebreak
+	
+	
+	\begin{thebibliography}{10}		
+		\begin{english}
+			
+		\bibitem{light}
+		Hartmann Vera, Liu Haipeng.
+		\textit{Quantitative Comparison of Photoplethysmographic 
+			Waveform Characteristics: Effect of Measurement Site}
+		Frontiers in Physiology , vol 10 (2019)
+		\url{https://www.frontiersin.org/article/10.3389/fphys.2019.00198}
+		
+		\bibitem{penetrate}
+		Ash, Caerwyn et al.
+		\textit{Effect of wavelength and beam width on 
+			penetration in light-tissue interaction using computational methods.}
+		Lasers in medical science vol. 32,8 (2017): 1909-1918.
+		\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653719/}		
+		
+		\bibitem{skin}
+		Feiner, John R. MD, Severinghaus.
+		\textit{Dark Skin Decreases the Accuracy of Pulse Oximeters at 
+			Low Oxygen Saturation}
+		December 2007 - Volume 105 - Issue 6 - p S18-S23
+		\url{https://journals.lww.com/anesthesia-analgesia/Fulltext/2007/12001/Dark_Skin_Decreases_the_Accuracy_of_Pulse.4.aspx}		
+		
+		\bibitem{mmpd} 
+		Argüello-Prada, Erick Javier. 
+		\textit{The mountaineer's method for peak detection in photoplethysmographic signals.} 
+		Revista Facultad De Ingenieria-universidad De Antioquia 2018 (2019): 42-50
+		\url{https://api.semanticscholar.org/CorpusID:116767900}
+		
+		\bibitem{nxp} 
+		Santiago Lopez, Freescale Semiconductor.
+		\textit{Pulse Oximeter Fundamentals and Design} 
+		Document Number: AN4327, Rev. 2, 11/2012
+		\url{https://www.nxp.com/docs/en/application-note/AN4327.pdf}
+		
+		\bibitem{ti}
+		Praveen Aroul, Texas Instruments.
+		\textit{Miniaturized Pulse Oximeter Reference Design}
+		User’s Guide and Test Report TIDA-00311
+		\url{https://www.ti.com/lit/pdf/tidu542}
+		
+		\bibitem{micro}
+		Zhang Feng, Microchip Technology Inc.
+		\textit{Pulse Oximeter Design Using Microchip’s Analog Devices
+			and dsPIC® Digital Signal Controllers (DSCs)}
+		AN1525,   04/28/2015
+		\url{http://ww1.microchip.com/downloads/en/Appnotes/00001525B.pdf}
+		
+		\bibitem{oxf}
+		Dr. Neil Townsend, Department of Engineering Science, University of Oxford.
+		\textit{C3B Medical Electronics Lecture Notes}
+		\url{https://www.robots.ox.ac.uk/~neil/teaching/lectures/med_elec/notes6.pdf}	
+		
+		\bibitem{wuk}
+		Michael W. Wukitsch, BA,Michael T. Petterson.
+		\textit{Pulse Oximetry: Analysis of Theory,Technology and Practice}
+		\url{https://doi.org/10.1007/BF01617328}	
+			
+		\end{english}	
+	\end{thebibliography}
+
+	\pagebreak
+	\section{समापन टिप्पणियाँ}
+
+	मैंने पूरी प्रक्रिया के दौरान विशेष रूप से \cite{nxp}, \cite{ti}, \cite{micro}, \cite{oxf}, \cite{wuk} दस्तावेजों का व्यापक रूप से अध्ययन किया था कमियों को दूर करने और डिजाइन में सुधार/पुनरीक्षण करने के लिए।\par
+	\bigskip
+	
+	इस प्रोजेक्ट को पूरा करने से मुझे एक डिजाइन के नज़रिए से बहुत सी चीजें सीखने को मिली और साथ हि उन उत्पादों के लिए बहुत सम्मान बडा जिनका मैं रोज उपयोग करता हूं, जाहा बड़ी संख्या में मापदंडों को जाँचा जाता है और यह सुनिश्चित किया जाता है कि प्रोडक्ट सही काम करता हो। 	
+	
+	य़ह प्रोजेक्ट बनाने मे मुझे 7 महिने लगे और औसत 20 घंटे प्रति हफ्ता काम किया इस पर। इस दौरान मेने 3 वर्जन बनाये, यह लेख तीसरे वर्जन पर आधारित है। इस वर्जन मे और भि सुधार किया जा सक़ता है इसीलिये प्रोजेक्ट डायरेक्टरी मे एक लिखन मौजूद है जाहा सारे सुधारो और मोजूदा कमियों को लिखा गया है। मे इन पर आगे काम नही करना चाहूंगा क्योँकि जिन कारणों से इस प्रोजेक्ट को शुरु किया था, उनकी पुरती हो गई है:
+	
+	\begin{itemize}
+		\item एक प्रोजेक्ट सम्भालना और उसे शुरु से अंत तक खत्म करना। साथ हि 2 भाशाओ मे इसका लेखन करना। 
+		\item प्रोजेक्ट का एक YouTube व्लॉग। 
+	\end{itemize}
+	
+	मैंने अतीत में इनमें से कुछ भी नहीं किया था इसलिए इस परियोजना को पूरा करने के लिए मुझे खुद को बदलने की आवश्यकता थी। इस यात्रा से मैंने जो सबसे महत्वपूर्ण सबक सीखे हैं वे हैं:
+	
+	\begin{itemize}
+		\item कभी भी किसी ऐसी चीज को जो मुश्किल या पहुंच से बाहर लगती है, उस पर काम करने के अपने निर्णय पर विचार न करना। आप कुछ भी नहीं जानते हैं, इसलिए सब कुछ मुश्किल होगा, लेकिन यह मुश्किल, किसी काम को करने के चुनाव का आधार नही बननी चाहिये।
+		
+		\item संगतता। डिज़ाइन के साथ कई मुद्दे थे जो मुझे सप्ताहांत पर मिले, जो बाद में अगले सप्ताहांत में हल हो गए, क्योंकि इसमें निरंतरता थी और मैं हर दिन उस समस्या से जुड़ा था।
+		
+	\end{itemize}
+	
+	\bigskip
+	मैं अब इस दस्तावेज़ को समाप्त करता हूँ। यदि आपके पास कोई सुझाव या टिप्पणी है, तो आप मुझसे Twitter \href{https://twitter.com/yskabhijeet}{@yskabhijeet} पर संपर्क कर सकते हैं। 
+
+	
+\end{document}

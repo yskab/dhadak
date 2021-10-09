@@ -1,0 +1,144 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows, shapes.geometric}
+\usepackage{graphicx}
+\usepackage{caption, copyrightbox}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{xfrac}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{lmodern}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	pdftitle={Dhadak - A Pulse Oximeter},
+	pdfsubject={Engineering, Circuit Design, Medical},
+	pdfauthor={Y S K Abhijeet},
+	pdfkeywords={oximeter, circuit design, electronics, heart rate}
+}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+
+\begin{document}
+			
+	\pagenumbering{roman}		
+	\begin{titlepage}
+		\vspace*{5cm}
+		{\centering
+			
+			\includegraphics[width=1\textwidth]{../common/logo.png}\par
+		}
+		\vspace{4cm}
+		\hfil \Large\bfseries English \hfil
+		\vfill
+	\end{titlepage}
+
+	\include{about}
+	\tableofcontents
+	\pagebreak
+	\pagenumbering{arabic}
+	
+	\include{intro}	
+	\include{comp}
+	\include{circuit}
+	\include{algo}
+	\include{enc}
+	
+	\pagebreak
+	
+	
+	\begin{thebibliography}{10}		
+		
+		
+		\bibitem{light}
+		Hartmann Vera, Liu Haipeng.
+		\textit{Quantitative Comparison of Photoplethysmographic 
+		Waveform Characteristics: Effect of Measurement Site}
+		Frontiers in Physiology , vol 10 (2019)
+		\url{https://www.frontiersin.org/article/10.3389/fphys.2019.00198}
+
+		\bibitem{penetrate}
+		Ash, Caerwyn et al.
+		\textit{Effect of wavelength and beam width on 
+		penetration in light-tissue interaction using computational methods.}
+		Lasers in medical science vol. 32,8 (2017): 1909-1918.
+		\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653719/}		
+		
+		\bibitem{skin}
+		Feiner, John R. MD, Severinghaus.
+		\textit{Dark Skin Decreases the Accuracy of Pulse Oximeters at 
+		Low Oxygen Saturation}
+		December 2007 - Volume 105 - Issue 6 - p S18-S23
+		\url{https://journals.lww.com/anesthesia-analgesia/Fulltext/2007/12001/Dark_Skin_Decreases_the_Accuracy_of_Pulse.4.aspx}		
+		
+		\bibitem{mmpd} 
+		Argüello-Prada, Erick Javier. 
+		\textit{The mountaineer's method for peak detection in photoplethysmographic signals.} 
+		Revista Facultad De Ingenieria-universidad De Antioquia 2018 (2019): 42-50
+		\url{https://api.semanticscholar.org/CorpusID:116767900}
+		 
+		\bibitem{nxp} 
+		Santiago Lopez, Freescale Semiconductor.
+		\textit{Pulse Oximeter Fundamentals and Design} 
+		Document Number: AN4327, Rev. 2, 11/2012
+		\url{https://www.nxp.com/docs/en/application-note/AN4327.pdf}
+		
+		\bibitem{ti}
+		Praveen Aroul, Texas Instruments.
+		\textit{Miniaturized Pulse Oximeter Reference Design}
+		User’s Guide and Test Report TIDA-00311
+		\url{https://www.ti.com/lit/pdf/tidu542}
+		
+		\bibitem{micro}
+		Zhang Feng, Microchip Technology Inc.
+		\textit{Pulse Oximeter Design Using Microchip’s Analog Devices
+		and dsPIC® Digital Signal Controllers (DSCs)}
+		AN1525,   04/28/2015
+		\url{http://ww1.microchip.com/downloads/en/Appnotes/00001525B.pdf}
+
+		\bibitem{oxf}
+		Dr. Neil Townsend, Department of Engineering Science, University of Oxford.
+		\textit{C3B Medical Electronics Lecture Notes}
+		\url{https://www.robots.ox.ac.uk/~neil/teaching/lectures/med_elec/notes6.pdf}	
+
+		\bibitem{wuk}
+		Michael W. Wukitsch, BA,Michael T. Petterson.
+		\textit{Pulse Oximetry: Analysis of Theory,Technology and Practice}
+		\url{https://doi.org/10.1007/BF01617328}	
+	\end{thebibliography}
+
+	\pagebreak
+	\section{Closing Comments}
+	
+	I referred the listed documents extensively throughout the process specifically \cite{nxp}, \cite{ti}, \cite{micro}, \cite{oxf}, \cite{wuk} to close gaps in my understanding and to improve/revisit the design.\par
+	\bigskip
+	Completing this project taught me lot of things from a design perspective and a lot of respect for the products that I use on daily basis considering the amount of iterations something must have went through and enormous number of checks/edge cases to ensure it works just right.
+	
+	For me, this project took close to 7 months for completion, considering I worked 20hrs/week on average. I made 3 iterations in total during this timeline, documented is the 3\textsuperscript{rd} version. There are still a lot of improvements i can think of hence a shortcomings/recommended improvements page is added to project directory where i have listed all further improvements or current issues which can be worked on. I wouldn't want to progress these anymore as somewhere i feel the initial goal with which i started off has met:
+	
+	\begin{itemize}
+		\item Making something from scratch(at least a suitable prototype) and documenting the entire project in 2 different languages.
+		\item A YouTube Vlog of the project.
+	\end{itemize}
+
+	I hadn't done any of this in the past hence this project required me to change myself to accomplish it. Most important lessons that i have learned from this journey are:
+	
+	\begin{itemize}
+	\item Never let something which appears difficult or out of reach contemplate your decision to work on it. You know nothing so everything is going to be difficult to understand but it shouldn't become a filter for choosing what to work on.
+	
+	\item Consistency. There were many issues with design that I found on weekends which later got resolved in the next weekend only because there was consistency and I was involved with the problem on a daily basis performing new workarounds every day.
+	\end{itemize}
+
+	\bigskip
+	I would end this document now. If you have any suggestions or comments, you can reach me out on Twitter
+	\href{https://twitter.com/yskabhijeet}{@yskabhijeet}.
+	
+
+	
+\end{document}
