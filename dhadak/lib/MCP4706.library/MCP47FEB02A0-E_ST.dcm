@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MCP47FEB02A0-E_ST
+D DAC 8-Bit 2-Ch I2C 8-Pin TSSOP Microchip MCP47FEB02A0-E/ST, 2-channel 8 bit Serial DAC, 8-Pin TSSOP
+F http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en573220
+$ENDCMP
+#
+#End Doc Library
