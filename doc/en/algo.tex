@@ -23,7 +23,7 @@
 			\node (setlv) [process, left of=findlv,xshift=-3cm] {Set new drive current};
 			\node (dc) [process, below of=findlv,yshift=-1cm] {Find red/ir \\DC levels};
 			\node (diff) [process, below of=dc] {Generate Diff signal};
-			\node (amp) [decision, below of=diff,yshift=-1cm] {within\\ preset level};
+			\node (amp) [decision, below of=diff,yshift=-1cm] {$V_2$ within\\ preset level};
 			\node (pga) [process, left of=amp,xshift=-3cm] {PGA: Select gain\\ \& Amplify};
 			\node (adc) [process, below of=amp,yshift=-1cm] {Read ADCs\\at every pulse};
 			\node (filt) [process, below of=adc] {$2^{nd}$ order IIR filter};
@@ -68,7 +68,7 @@
 				DAC generates diff signal\\\footnotesize for DC subtraction};
 			
 			\draw (amp) ++(3.8,0) node [align = left]{\footnotesize
-				Enable PGA if\\\footnotesize not within acceptable level};
+				Enable PGA if $V_2$\\\footnotesize not within acceptable level};
 			
 			\draw (ratio) ++(0,1) node [align = left]{\footnotesize
 				R is found for\\\footnotesize consecutive samples};

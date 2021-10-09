@@ -156,7 +156,7 @@
 						(2,3) node[op amp,yscale=-1] (opamp) {}
 						(opamp.down) -- +(0,0.3) node[vcc]{Vcc}
 						(opamp.up) -- +(0,-0.3) node[ground]{}
-						(opamp.+) to ++(-2,0) node[label={left:$V_{in}$}] {}
+						(opamp.+) to ++(-2,0) node[label={left:$V_2$}] {}
 						(opamp.-) -- ++(0,-1.7) -- ++(1,0)
 						to [R, l^=$10K$] ++(1,0) -- ++(1,0) -- ++(0,2.2) to (opamp.out)
 						(opamp.-) ++(0,-1.7) -- ++(0,-1.5) to [R, l^=$10K$] ++(0,-1) -- ++(0,-0.5)

@@ -23,7 +23,7 @@
 			\node (setlv) [process, left of=findlv,xshift=-3cm] {नया ड्राइव करंट सेट करें};
 			\node (dc) [process, below of=findlv,yshift=-1cm] {लाल/इन्फ़रा का \\DC स्तर खोजें};
 			\node (diff) [process, below of=dc] {डिफ सिग्नल उत्पन्न करें};
-			\node (amp) [decision, below of=diff,yshift=-1cm] {निर्धारित स्तर\\के अन्तर्गत};
+			\node (amp) [decision, below of=diff,yshift=-1cm] {$V_2$ निर्धारित \\ स्तर के अन्तर्गत};
 			\node (pga) [process, left of=amp,xshift=-3cm] {PGA: बढ़त चुन\\कर एम्प्लिफ़्य};
 			\node (adc) [process, below of=amp,yshift=-1cm] {प्रत्येक पल्स पर\\ADC पढ़ें};
 			\node (filt) [process, below of=adc] {$2^{nd}$ ऑर्डर IIR फ़िलटर};
@@ -68,8 +68,8 @@
 			\draw (diff) ++(3.6,0) node [align = left]{\footnotesize
 			DAC डिफ़ सिगनल उत्पन्न \\\footnotesize करेगा DC घटाव के लिये};
 			
-			\draw (amp) ++(3.5,0) node [align = left]{\footnotesize
-			PGA सक्षम करें यदि\\\footnotesize सिगनल स्वीकार्य स्तर के \\\footnotesize भीतर नहीं};
+			\draw (amp) ++(3.4,0) node [align = left]{\footnotesize
+			PGA सक्षम करें यदि\\\footnotesize $V_2$ स्वीकार्य स्तर के \\\footnotesize भीतर नही हो};
 			
 			\draw (ratio) ++(0,1) node [align = left]{\footnotesize
 				R कि गणाना\\\footnotesize पडोसी समंक बिन्दुओ से};
