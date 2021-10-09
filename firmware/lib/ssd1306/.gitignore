@@ -31,3 +31,18 @@
 # Debug files
 *.dSYM/
 *.d
+
+#hiding doc and other non important files for Dhadak project
+#Refer the project source for updated details
+#https://github.com/lexus2k/ssd1306
+docs
+examples
+imgs
+CODE_OF_CONDUCT.md
+ONCTRIBUTING.md
+ISSUE_TEMPLATE.md
+keywords.txt
+resources_consumption.txt
+ssd1306.cppcheck
+.github
+tools
