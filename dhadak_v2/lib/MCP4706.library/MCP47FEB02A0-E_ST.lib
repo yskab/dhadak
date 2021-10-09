@@ -1,0 +1,32 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# MCP47FEB02A0-E_ST
+#
+DEF MCP47FEB02A0-E_ST IC 0 30 Y Y 1 F N
+F0 "IC" 1150 300 50 H V L CNN
+F1 "MCP47FEB02A0-E_ST" 1150 200 50 H V L CNN
+F2 "SOP65P640X120-8N" 1150 100 50 H I L CNN
+F3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en573220" 1150 0 50 H I L CNN
+F4 "DAC 8-Bit 2-Ch I2C 8-Pin TSSOP Microchip MCP47FEB02A0-E/ST, 2-channel 8 bit Serial DAC, 8-Pin TSSOP" 1150 -100 50 H I L CNN "Description"
+F5 "1.2" 1150 -200 50 H I L CNN "Height"
+F6 "Microchip" 1150 -300 50 H I L CNN "Manufacturer_Name"
+F7 "MCP47FEB02A0-E/ST" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "579-MCP47FEB02A0EST" 1150 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MCP47FEB02A0-E-ST?qs=rQCxX1QmdjKDJonwz1QvmA%3D%3D" 1150 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "MCP47FEB02A0-E/ST" 1150 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/mcp47feb02a0-est/microchip-technology" 1150 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+P 5 0 1 6 200 100 1100 100 1100 -400 200 -400 200 100 f
+X VDD 1 0 0 200 R 50 50 0 0 P
+X VREF 2 0 -100 200 R 50 50 0 0 P
+X VOUT0 3 0 -200 200 R 50 50 0 0 P
+X VOUT1 4 0 -300 200 R 50 50 0 0 P
+X VSS 5 1300 -300 200 L 50 50 0 0 P
+X LAT/HVC 6 1300 -200 200 L 50 50 0 0 P
+X SCL 7 1300 -100 200 L 50 50 0 0 P
+X SDA 8 1300 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+#End Library
