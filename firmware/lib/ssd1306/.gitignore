@@ -1,0 +1,50 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.d
+
+#hiding doc and other non important files for Dhadak project
+#Refer the project source for updated details
+#https://github.com/lexus2k/ssd1306
+docs
+examples
+imgs
+CODE_OF_CONDUCT.md
+ONCTRIBUTING.md
+ISSUE_TEMPLATE.md
+keywords.txt
+resources_consumption.txt
+ssd1306.cppcheck
+.github
+tools
+src/lcd
+src/nano_engine
