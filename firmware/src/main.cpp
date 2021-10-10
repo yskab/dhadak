@@ -48,8 +48,8 @@
   https://github.com/lexus2k/ssd1306
 
   changed user_settings.h for software I2C mode
-  changed ssd1306_i2c_embedded.c for atmega4808 ports 
-  changed ssd1306_i2c_conf.h to add atmaga4808 i2c pins
+  changed ssd1306_i2c_embedded.c for ATmega4808 ports 
+  changed ssd1306_i2c_conf.h to add ATmega4808 i2c pins
 
   To view OLED Images
   bmp2hex by Robert Gallup
@@ -207,6 +207,11 @@ uint8_t calc_battery_level()
   in between, calculate percentages linearly
   in practise, change battery if below 50% as oled might not turn on properly for
   voltages below 2.8V
+
+  I used duracell AAA batteries, MN2400
+  https://www.duracell.com/wp-content/uploads/2020/02/MN24US1119.pdf
+  lets consider 2.7 as threshold and max average device current draw is 25mA
+  from datasheet, continuous operation period should be around 13hrs.
   */
 
   uint8_t battery_perc;
