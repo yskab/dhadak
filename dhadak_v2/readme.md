@@ -24,12 +24,6 @@ This KiCAD directory has the updated v2 schematics. PCB was not designed, PCB in
   <img src="/doc/common/circuit/ringing.png"/>
 </p>
 
-* 50Hz line interference visible, though it gets filtered by IIR filter in the microcontroller, maybe a filter can be added to remove it from input signal itself.
-
-<p align="middle">
-  <img src="/doc/common/circuit/50_hum.png"/>
-</p>
-
 * Enclosure size was made as per battery lengths, PCB dimension could have been increased, allowing all the parts to fit in back, this would allow easy reflow of the backside and no hand soldering.
 
 ## Credits
