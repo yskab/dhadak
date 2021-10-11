@@ -256,6 +256,7 @@ void setup()
 {
   Serial.begin(230400);          
 
+  //calc battery percentage
   uint8_t batp = calc_battery_level();
   char batp_str[4];
   sprintf(batp_str, "%d%%", batp);   
@@ -306,7 +307,7 @@ void loop()
 {
   
   /*Delay 100us and 40us are placed to get effective individual pulse period of red
-  and ir to be 500hz, this is a poor solution but works ok.
+  and ir to be 500hz, this is a not a good solution but works ok.
   ideal solutions could be to use counters and use count value to first set the DACs
   then Leds. I decided to stick with delay version as it worked fine.*/
 
@@ -326,7 +327,7 @@ void loop()
   ir_itov = analogRead(ITOV_PIN);     //Read ItoV stage value for IR
   ADC0.CTRLC = 66;                    //Change ADC Internal Reference to 1.1V
   ADC0.CTRLB = 6;                     //Oversampling, Accumulate 64 samples
-  ir_amp = analogRead(PPG_PIN);       //Read Output of Difference Amplifier Stage
+  ir_amp = analogRead(PPG_PIN);       //Read PPG output
   ir_amp >>=3;                        //Right shift by 3 to get 13 bit output
   digitalWrite(IR_PULSE_PIN,LOW);     //Turn off IR LED           
   delayMicroseconds(40);   
@@ -418,9 +419,9 @@ void loop()
             - Signal's peak reaches a set threshold of 800.
 
             It is required to get max increase in signal peak at this stage
-            for improved detection, there is amplificatino stage later, but it will incrase noise also
+            for improved detection, there is amplification stage later, but it will increase noise also
             hence strategy is to drive leds for maximum signal output - avoiding opamp saturation
-            so that minium gain can be used in later stage for ADC full swing usage
+            so that minimum gain can be used in later stage for full ADC usage
             */
             if(!ir_led_set || !red_led_set)
             {
@@ -447,7 +448,7 @@ void loop()
             }
             else
             {
-              //Required intensity set! now start the DAC so that DC can be subtrated
+              //Required intensity set! now set dc levels
               //Calculate dc levels for 8 bit dac.
               dac_ir_level = 256/(1024.0/(ir_itov_min));      
               dac_red_level = 256/(1024.0/(red_itov_min));
@@ -695,9 +696,9 @@ void loop()
   red_amp_prev = red_amp;
   
   
-  //Update Display every 5secs
+  //Update Display every 3secs
   if(start_disp)
-    if(now + 5 < millis()/1000)
+    if(now + 3 < millis()/1000)
     {
 
       char h_beat_str[4],spo2_str[3];
