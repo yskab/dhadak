@@ -2,8 +2,9 @@
 # धड़क\Dhadak - A Pulse Oximeter
 
 <p align="middle">
-  <img src="https://github.com/yskab/dhadak/blob/main/images/top.jpg?raw=true" width="200" height="200" />
-  <img src="https://github.com/yskab/dhadak/blob/main/images/side.jpg?raw=true" width="200" height="200" /> 
+  <img src="/images/top.jpg" width="200" height="200" />
+  <img src="/images/side.jpg" width="200" height="200" /> 
+  <img src="/images/front.jpg" width="200" height="200" />
 </p>
 
 
@@ -37,7 +38,7 @@ It was quite difficult to build a device that would work accurately for all fing
 * Runs on 2 AAA Batteries (MN2400).
 * Takes 15 secs max to find parameters (can find earlier, depends on subject's skin as leds adjust intensity to obtain a good response).
 * Max average current draw: 25mA( This is the maximum draw when leds at full brightness). As per battery's datasheet and minimum operating voltage of 2.7V, this would give a continuous operation time of 13hrs. 
-* 5 sec display update rate.
+* 3 sec display update rate.
 * Battery percentage indicator.
 * Snap-fit enclosure with spring mechanism which ensures good firm contact of finger with photodiode.
 * Soft latch power On/Off main button.
@@ -67,11 +68,15 @@ Device was built as per KiCAD project: /dhadak. During testing, I later discover
 
 If you wish to build this device, please refer /dhadak_v2 project, it has the updated final schematics as per amendments in v1. Though PCB design was not done for this updated version, you can use the schematics present in the directory and build a PCB for it. Changes/amendments from v1 are mention in /dhadak_v2/readme.
 
-* For a new ATmega4808 first burn fuse to change clock to internal 8MHz.
+### Programming Device
+
+* For ATmega4808 first burn fuse to change clock to internal 8MHz.
 
 * Proceed with code upload.
 
-Please ensure to use good leds recommended for oximetry. I worked with generic ir & red leds which are used for indication application hence SpO<sub>2</sub> was not quite accurate (as a healthy individual I should have got readings around 97+ but used to get around 85-90. This is the reason a small scaling factor has been added in code to compensate and calculate higher reading). These indication LEDs should not be used for oximeter. For best response ensure LEDs have:
+* Insert finger and press power button, wait for values to appear.
+
+Please ensure to use good leds recommended for oximetry. I worked with generic ir & red leds which are used for indication applications hence SpO<sub>2</sub> was not quite accurate (as a healthy individual I should have got readings around 97+ but used to get around 85-90. This is the reason a small scaling factor has been added in code to compensate and calculate higher reading). These indication LEDs should not be used for oximeter. For best response, ensure LEDs have:
 
 * Narrow view angle for less dispersion and deeper penetration into the skin.
 * Rectangular package in the clear lens so that finger can rest comfortably.
