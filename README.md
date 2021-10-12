@@ -28,8 +28,12 @@ width="300" height="190"/>
 
 * ATmega4808 microcontroller is used in design along with QSB34CGR photodiode.
 
-Project Youtube video:
+***Project Youtube video***
 
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=QoOAn5z_qHc"><img src="/images/thumb.png" alt="Project Youtube video:"
+  width="533" height="300"/></a>
+</div>
 
 
 It was quite difficult to build a device that would work accurately for all finger types. Still, there are issues/improvements which I could think of in design, code & enclosure. Hence I decided to create an improvements section in each specific readme for the project directory. Anyone interested in building this project can refer to it and create a better device.
@@ -76,7 +80,7 @@ If you wish to build this device, please refer /dhadak_v2 project, it has the up
 
 * Insert finger and press power button, wait for values to appear.
 
-Please ensure to use good leds recommended for oximetry. I worked with generic ir & red leds which are used for indication applications hence SpO<sub>2</sub> was not quite accurate (as a healthy individual I should have got readings around 97+ but used to get around 85-90. This is the reason a small scaling factor has been added in code to compensate and calculate higher reading). These indication LEDs should not be used for oximeter. For best response, ensure LEDs have:
+Please ensure to use good leds recommended for oximetry. I worked with generic ir & red leds which are used for indication applications hence SpO<sub>2</sub> was not quite accurate (as a healthy individual I should have got readings around 97+ but used to get around 90. This is the reason a small scaling factor has been added in code to compensate and calculate higher reading). These indication LEDs should not be used for oximeter. For best response, ensure LEDs have:
 
 * Narrow view angle for less dispersion and deeper penetration into the skin.
 * Rectangular package in the clear lens so that finger can rest comfortably.
